@@ -174,7 +174,7 @@ public class DbQuery implements AutoCloseable
         return this;
     }
 
-    public <T> DbQuery between(String column, Object value1, Object value2)
+    public <T> DbQuery between(String column, T value1, T value2)
     {
         buffer.append(column).append(" between ? and ? ");
         preparedValues.add(value1);
@@ -310,13 +310,5 @@ public class DbQuery implements AutoCloseable
     {
         buffer = new StringBuilder();
         preparedValues.clear();
-        try
-        {
-            preparedStatement.close();
-        } catch (SQLException throwables)
-        {
-            throwables.printStackTrace();
-        }
-        preparedStatement = null;
     }
 }

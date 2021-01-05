@@ -3,7 +3,6 @@ package com.jdbcup;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class DbResult
 {
@@ -28,5 +27,16 @@ public class DbResult
     public ArrayList<DbLine> getLines()
     {
         return lines;
+    }
+
+    @Override
+    public String toString()
+    {
+        StringBuilder builder = new StringBuilder();
+        for(DbLine line : lines)
+        {
+            builder.append(line).append("\n");
+        }
+        return builder.toString();
     }
 }

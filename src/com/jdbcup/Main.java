@@ -8,6 +8,8 @@ public class Main {
     {
 	    DbQuery query = DbQuery.create(DBConnector.connect("db_test", "root", "13Mysql53"));
 
-	    query.delete().from("users").prepareAndExecute();
+	    query.insert_into("users", "name", "password")
+                .values("Arthur", "1234")
+                .prepareAndExecute();
     }
 }
