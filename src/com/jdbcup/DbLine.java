@@ -8,7 +8,7 @@ public class DbLine extends HashMap<String, Object>
 {
     public DbLine load(ResultSet resultSet) throws SQLException
     {
-        for(int i = 1; i < resultSet.getMetaData().getColumnCount(); i++)
+        for(int i = 1; i < resultSet.getMetaData().getColumnCount() + 1; i++)
         {
             put(resultSet.getMetaData().getColumnName(i), resultSet.getObject(i));
         }
