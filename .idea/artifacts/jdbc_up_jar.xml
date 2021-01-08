@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="jdbc_up:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/jdbc_up_jar</output-path>
+    <root id="archive" name="jdbc_up.jar">
+      <element id="module-output" name="jdbc_up" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/mysql-connector-java-8.0.21.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

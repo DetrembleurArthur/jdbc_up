@@ -66,6 +66,18 @@ public class DbQuery implements AutoCloseable
         return this;
     }
 
+    public DbQuery coma()
+    {
+        buffer.append(", ");
+        return this;
+    }
+
+    public DbQuery custom(String str)
+    {
+        buffer.append(str).append(" ");
+        return this;
+    }
+
     public DbQuery delete()
     {
         update = true;
